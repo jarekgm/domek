@@ -1,0 +1,497 @@
+/* zielony #375f2a */
+
+/* pomarańczowy #FFA500 */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  background-color: #375f2a;
+  color: #fff;
+}
+
+section{
+  padding-top: 50px;
+}
+
+/* ----- HEADINGS ----- */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size:250%;
+    word-spacing: 3.5px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 160%;
+    margin-bottom: 15px;
+    text-align: center;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+}
+
+h3:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+h4{
+  text-align: center;
+  font-size: 120%;
+  margin-top: 10px;
+}
+
+h4:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 90px;
+    margin: 10px auto;
+    margin-top: 10px;
+}
+p {
+  line-height: 1.2rem;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:0 1%;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/*-----------------------------------------------------*/
+
+/*   STRONA GŁÓWNA                            */
+
+/*-----------------------------------------------------*/
+
+.stronaGlowna {
+  color: white;
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/domek/domek-tlo-min.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/domek/domek-tlo-min.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+
+/* main navigation */
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 45px;
+  z-index: 9999;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.main-nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: border .2s;
+}
+
+.main-nav li a:hover {
+  border-bottom: 3px solid #FFA500;
+}
+
+.main-nav a:focus {
+  border-bottom: 3px solid #FFA500;
+}
+
+/* mobile navi */
+.mobile-navi-icon{
+  float:right;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* sticky navigation */
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9998;
+}
+
+.sticky-icon{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  color:#000;
+}
+
+.sticky .main-nav { margin: 12px 0; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 0.5rem 0;
+    color: #555;
+}
+
+.logo {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.logo h1 {
+  animation: wjazd;
+  animation-duration: 2s;
+}
+
+/* Button zapraszamy */
+
+.btn-main {
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+
+}
+
+.btn,
+input[type=submit] {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  background-color: #FFA500;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3px;
+  animation: wjazdbtn;
+  animation-duration: 2s;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #ec9c08;
+}
+
+.phone{
+    display: none;
+    animation: none;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 25px;
+    width: auto;
+    padding: 10px 20px;
+}
+a[href^="tel:"] {
+  color: inherit;
+  text-decoration: none;
+    font-size: 100%;
+}
+@keyframes wjazd {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes wjazdbtn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/*-----------------------------------------------------*/
+
+/*   Sekcja oferta                                  */
+
+/*-----------------------------------------------------*/
+
+.naglowek {
+  padding: 1rem 0 0.5rem 0;
+}
+
+
+.oferta-opis {
+  margin: 5px auto;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.oferta-opis img{
+  width:85%;
+  margin: 30px auto;
+  display: block;
+}
+
+.oferta-opis p{
+  text-align: center;
+  line-height: 1.5rem;
+}
+.srodek{
+  padding: 40px 0;
+}
+.btn-srodek{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.btn-srodek-a{
+  position: absolute;
+  left:50%;
+  top:90%;
+  transform: translate(-50%, -50%);
+  animation: none;
+  padding: 15px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.divOferta {
+  width: 45%;
+
+}
+
+
+.divOferta img {
+  width: 100%;
+}
+
+
+
+
+/*-----------------------------------------------------*/
+/*   Atrakcje                                 */
+/*-----------------------------------------------------*/
+.sekcja-zdjecia{
+    height: auto;
+}
+
+.zdjecia-okolica {
+  list-style: none;
+  width: 100%;
+}
+
+.zdjecia-okolica li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.zdjecia-okolica_zdjecie {
+  width: 100%;
+  margin: 0px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.zdjecia-okolica_zdjecie img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.zdjecia-okolica_zdjecie img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/*-----------------------------------------------------*/
+/*   cennik                                 */
+/*-----------------------------------------------------*/
+.cennik{
+  text-align: center;
+  text-transform: uppercase;
+  height: 100vh;
+  margin-bottom: 30px;
+}
+.cennik span{
+  font-size: 120%;
+}
+
+.negocjacja{
+  font-size: 0.8rem;
+  text-transform:none;
+  color:#ccc;
+  padding: 7px 0;
+}
+
+.wyposazenie{
+font-size: 80%;
+}
+
+
+.fas.icon{
+  font-size: 3rem;
+  padding: 7px 0;
+}
+
+/* *********************************** */
+/* sekcja kontakt */
+/* *********************************** */
+.map-container{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+}
+.contact-form{
+  color:#555;
+  position: absolute;
+  width: 50%;
+  top:0px;
+  right: 0px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  padding: 40px;
+}
+
+.contact-form h2{
+  margin-top: 30px;
+}
+
+#map{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+.form{
+  margin-top:25px;
+}
+
+.form-message{
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.success{
+  background-color: rgba(75, 185, 14, 0.8);
+}
+
+.error{
+  background-color: rgba(221, 24, 28, 0.8);
+}
+
+input[type=text],
+textarea{
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+input[type=submit]{
+  animation: none;
+}
+
+textarea{
+  height: 100px;
+}
+
+*:focus{outline:none;}
+
+
+
+/* *********************************** */
+/* footer */
+/* *********************************** */
+
+footer{
+  background-color: #333;
+  font-size: 0.7rem;
+  color:#888;
+  text-align: center;
+  padding:20px 0;
+}
+.fas{
+  font-size: 2rem;
+}
+.copyright{
+  margin-top:15px;
+}
